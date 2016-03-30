@@ -26,15 +26,19 @@ if (Meteor.isClient) {
         height = 100;
         width = "100";
         return s = "style=\"height:" + height + "px;width:" + width + "px\"";
+      },
 
+      handleButtons : function (start, end, names) {
+        console.log(start);
       }
     
   });
 
-  Template.hello.events({
-    'click button': function () {
+  /*Template.setDay.events({
+    'click button': function() {
+      console.log(event);
     }
-  });
+  });*/
 }
 
 if (Meteor.isServer) {

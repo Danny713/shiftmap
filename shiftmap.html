@@ -32,8 +32,9 @@
 
   <th>{{day}}</th> 
     {{#each shift}}
-      <button style={{mapShift startS endS names}}>
-      {{startS}} - {{endS}}
+      <button style={{mapShift startS endS names}}; onClick={{handleButtons startS endS names}}>
+        {{startS}} - {{endS}}
+
 
 
       </button>
