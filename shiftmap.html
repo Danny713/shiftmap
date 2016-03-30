@@ -1,14 +1,44 @@
 <head>
-  <title>shiftmap</title>
+  <title>ShiftMap</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
-  {{> hello}}
+  <style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+  }
+  </style>
+
+  <h1> Shift Map </h1>
+  <h2> Student Employment Shift Manager </h2>
+
+  <!-- Retrieve the group and its start, end, and admin  -->
+
+  <table style="width:100%">
+    {{#each getDays}}
+      <td>{{>setDay}}</td>
+    {{/each}}
+  </table>
+
 </body>
 
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+
+<template name="setDay">
+
+  <th>{{day}}</th> 
+    {{#each shift}}
+      <button style={{mapShift startS endS names}}>
+      {{startS}} - {{endS}}
+
+
+      </button>
+    {{/each}}
+   
+ 
+
 </template>
